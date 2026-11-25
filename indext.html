@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Admirer's Notebook 📚</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =====================================
+         BACKGROUND DECORATIONS
+    ====================================== -->
+
+    <div class="background-decor">
+        <span class="doodle doodle-one">✎</span>
+        <span class="doodle doodle-two">✿</span>
+        <span class="doodle doodle-three">✧</span>
+        <span class="doodle doodle-four">📎</span>
+        <span class="doodle doodle-five">✦</span>
+        <span class="doodle doodle-six">☁</span>
+    </div>
+
+
+    <!-- =====================================
+         MAIN WEBSITE
+    ====================================== -->
+
+    <main class="website-container">
+
+        <!-- TOP HEADER -->
+
+        <header class="top-label">
+
+            <div class="label-left">
+                <span class="school-icon">📚</span>
+                <span>THE LITTLE NOTEBOOK PROJECT</span>
+            </div>
+
+            <div class="label-right">
+                VOL. 002
+            </div>
+
+        </header>
+
+
+        <!-- =================================
+             BOOK SECTION
+        ================================== -->
+
+        <section class="book-scene">
+
+            <div class="book" id="book">
+
+
+                <!-- =================================
+                     SINGLE BOOK COVER
+                ================================== -->
+
+                <div class="book-cover" id="bookCover">
+
+                    <!-- Book spine -->
+                    <div class="cover-spine"></div>
+
+                    <!-- Washi tape -->
+                    <div class="cover-tape tape-one"></div>
+                    <div class="cover-tape tape-two"></div>
+
+                    <!-- Cute stationery stickers -->
+                    <span class="cover-sticker sticker-cloud">☁️</span>
+                    <span class="cover-sticker sticker-star">⭐</span>
+                    <span class="cover-sticker sticker-flower">🌷</span>
+                    <span class="cover-sticker sticker-pencil">✏️</span>
+                    <span class="cover-sticker sticker-sparkle">✧</span>
+                    <span class="cover-sticker sticker-clip">📎</span>
+                    <span class="cover-sticker sticker-book">📚</span>
+                    <span class="cover-sticker sticker-butterfly">🦋</span>
+
+                    <!-- Main cover content -->
+                    <div class="cover-content">
+
+                        <p class="cover-top-label">
+                            A PERSONAL COLLECTION OF WORDS
+                        </p>
+
+                        <div class="cover-icon">📖</div>
+
+                        <h1>The Admirer's Notebook</h1>
+
+                        <div class="cover-divider">
+                            <span>✦</span>
+                            <span>✧</span>
+                            <span>✦</span>
+                        </div>
+
+                        <p class="cover-subtitle">
+                            A little apology, a few thoughts,<br>
+                            and some things worth saying.
+                        </p>
+
+                        <p class="cover-label">
+                            WRITTEN WITH SINCERITY NO. 002
+                        </p>
+
+                        <button
+                            class="open-book-button"
+                            id="openBookButton"
+                            type="button"
+                            onclick="openBook()">
+
+                            <span>Open this little book</span>
+                            <span class="button-arrow">→</span>
+
+                        </button>
+
+                        <p class="cover-bottom-note">
+                            made with a little courage <span>✿</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     BOOK PAGES
+                ================================== -->
+
+                <div class="book-pages" id="bookPages">
+
+
+                    <!-- PAGE 1: INTRODUCTION -->
+
+                    <article class="page" id="page1">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 01 · THE INTRODUCTION</span>
+                            <span class="page-number">01</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">📝</div>
+
+                            <h2>Well... where do I begin?</h2>
+
+                            <p class="handwriting">Dear Miss,</p>
+
+                            <p>
+                                First of all, congratulations! You have officially
+                                been selected as the reader of this very unofficial,
+                                highly unnecessary, and somewhat questionable
+                                publication.
+                            </p>
+
+                            <p>
+                                I would like to inform you that this notebook was
+                                created by an admirer who apparently has too many
+                                things running through his head and decided that
+                                writing them down was a better idea than letting
+                                them remain there forever.
+                            </p>
+
+                            <p>
+                                I could have simply sent a message. That would
+                                have been easier, shorter, and probably more
+                                convenient. But knowing myself, I would probably
+                                end up writing a very long paragraph anyway.
+                            </p>
+
+                            <p>
+                                So here we are. A whole notebook. With chapters.
+                                Pages. Decorations. And probably more effort
+                                than a normal person would put into an apology.
+                            </p>
+
+                            <p>
+                                Please don't judge the author too harshly.
+                                He's trying. HAHAHA.
+                            </p>
+
+                            <p class="handwriting signature">
+                                — Your humble admirer ✎
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>PLEASE READ AT YOUR OWN PACE</span>
+                            <span>01 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 2: WHY THIS NOTEBOOK EXISTS -->
+
+                    <article class="page hidden" id="page2">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 02 · A SMALL EXPLANATION</span>
+                            <span class="page-number">02</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">🖊️</div>
+
+                            <h2>Why did I make this?</h2>
+
+                            <p>
+                                Honestly, because there are things I should have
+                                said properly a long time ago.
+                            </p>
+
+                            <p>
+                                Sometimes, I think I know what I want to say,
+                                but when the moment comes, I don't express it
+                                the way I intended. I end up being quiet,
+                                choosing the wrong words, or thinking that
+                                everything will somehow become okay on its own.
+                            </p>
+
+                            <p>
+                                And that's not always fair to the person on the
+                                other side of the conversation.
+                            </p>
+
+                            <p>
+                                I don't want this notebook to be another message
+                                that simply says sorry and expects everything
+                                to go back to normal.
+                            </p>
+
+                            <p>
+                                I want to acknowledge the things I did wrong,
+                                the things I could have handled better, and
+                                the moments when my actions didn't match
+                                what I actually wanted to express.
+                            </p>
+
+                            <p>
+                                Also, I wanted to do something a little different.
+                                Something that would make you smile, maybe laugh
+                                a little, and hopefully remind you that someone
+                                took the time to put these thoughts together.
+                            </p>
+
+                            <p class="handwriting">
+                                Not the most ordinary notebook, I suppose.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>AN EXPLANATION FROM THE AUTHOR</span>
+                            <span>02 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 3: THE SILENCE -->
+
+                    <article class="page hidden" id="page3">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 03 · THE FIRST APOLOGY</span>
+                            <span class="page-number">03</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">📓</div>
+
+                            <h2>About the times I went quiet.</h2>
+
+                            <p>
+                                I'm sorry for the times I didn't communicate
+                                properly.
+                            </p>
+
+                            <p>
+                                There were moments when I became quiet because
+                                I didn't know what to say, because I thought
+                                I was giving things time, or because I was
+                                afraid that saying the wrong thing would make
+                                the situation worse.
+                            </p>
+
+                            <p>
+                                But I realize that silence can be confusing too.
+                                It can leave someone wondering what happened,
+                                what the other person is thinking, or whether
+                                they still matter enough to receive an explanation.
+                            </p>
+
+                            <p>
+                                I shouldn't have expected you to understand
+                                everything I never actually explained.
+                                You cannot read my mind, unfortunately.
+                                Although that would make communication
+                                considerably easier. HAHAHA.
+                            </p>
+
+                            <p>
+                                I should have communicated more clearly,
+                                even when things felt uncomfortable.
+                                I should have been honest about what was
+                                happening instead of leaving you to guess.
+                            </p>
+
+                            <p>
+                                I'm sorry if my silence made you feel ignored,
+                                unimportant, or uncertain. That wasn't something
+                                you deserved.
+                            </p>
+
+                            <p class="handwriting">
+                                I could have said something.
+                                I should have.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>COMMUNICATION MATTERS</span>
+                            <span>03 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 4: INITIATIVE -->
+
+                    <article class="page hidden" id="page4">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 04 · THINGS I SHOULD HAVE DONE</span>
+                            <span class="page-number">04</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">📌</div>
+
+                            <h2>I should have taken more initiative.</h2>
+
+                            <p>
+                                This is something I've been thinking about.
+                            </p>
+
+                            <p>
+                                Sometimes, I ask what you want, what you prefer,
+                                or what you would like to do because I genuinely
+                                want to know. But I also understand that asking
+                                all the time isn't the same as making an effort
+                                to think ahead.
+                            </p>
+
+                            <p>
+                                There are times when I should have made plans,
+                                suggested something, or simply taken the first
+                                step instead of waiting for everything to be
+                                figured out through another conversation.
+                            </p>
+
+                            <p>
+                                I don't want you to feel like you always have
+                                to be the one thinking about what happens next.
+                                I should be capable of making thoughtful
+                                decisions too.
+                            </p>
+
+                            <p>
+                                And no, I don't mean that I'll suddenly become
+                                a professional event planner overnight.
+                                Please lower your expectations just a little.
+                                I am still learning. HAHAHA.
+                            </p>
+
+                            <p>
+                                But I can be more intentional. I can pay
+                                attention, remember the little things,
+                                and make an effort without always waiting
+                                to be told what to do.
+                            </p>
+
+                            <p class="handwriting">
+                                Less waiting. More doing.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>EFFORT SHOULD BE VISIBLE</span>
+                            <span>04 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 5: THE MISUNDERSTANDINGS -->
+
+                    <article class="page hidden" id="page5">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 05 · THE MISUNDERSTANDINGS</span>
+                            <span class="page-number">05</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">🗒️</div>
+
+                            <h2>For the times I misunderstood.</h2>
+
+                            <p>
+                                I'm sorry for the times I misunderstood
+                                your words, your feelings, or the things
+                                you were trying to communicate.
+                            </p>
+
+                            <p>
+                                Sometimes, I get caught up in my own thoughts.
+                                I overthink what something means, make
+                                assumptions, or react before I fully
+                                understand the situation.
+                            </p>
+
+                            <p>
+                                I know that listening is more than just
+                                waiting for my turn to respond.
+                                It means actually trying to understand
+                                what someone is saying, even when it
+                                isn't easy to hear.
+                            </p>
+
+                            <p>
+                                I also know that good intentions don't
+                                automatically make every action right.
+                                I might mean well, but that doesn't erase
+                                how something could have made you feel.
+                            </p>
+
+                            <p>
+                                So I'm sorry for the moments when I
+                                didn't listen carefully enough, when
+                                I made things more complicated, or
+                                when I failed to understand your side.
+                            </p>
+
+                            <p>
+                                I don't want every disagreement to become
+                                a competition about who is right.
+                                Sometimes, understanding matters more
+                                than winning an argument.
+                            </p>
+
+                            <p class="handwriting">
+                                A little more listening.
+                                A little less assuming.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>UNDERSTANDING TAKES EFFORT</span>
+                            <span>05 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 6: THE SMALL THINGS -->
+
+                    <article class="page hidden" id="page6">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 06 · THE LITTLE DETAILS</span>
+                            <span class="page-number">06</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">✏️</div>
+
+                            <h2>I should pay attention.</h2>
+
+                            <p>
+                                I know that thoughtful gestures aren't
+                                always about spending money or giving
+                                something expensive.
+                            </p>
+
+                            <p>
+                                Sometimes, it's about remembering a detail,
+                                noticing when something matters to someone,
+                                or doing something small because you
+                                genuinely thought of them.
+                            </p>
+
+                            <p>
+                                I don't want to be someone who only
+                                asks what you like but never remembers
+                                the answer.
+                            </p>
+
+                            <p>
+                                I want to become better at noticing
+                                the little things, remembering conversations,
+                                and paying attention to what makes
+                                your day a little better.
+                            </p>
+
+                            <p>
+                                I may not remember every single detail
+                                perfectly. My memory occasionally
+                                behaves like an old computer with
+                                too many tabs open.
+                                Please forgive the hardware. HAHAHA.
+                            </p>
+
+                            <p>
+                                But I shouldn't use that as an excuse.
+                                I can make a conscious effort to
+                                remember what matters.
+                            </p>
+
+                            <p class="handwriting">
+                                The little things aren't little
+                                when they matter to someone.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>PAY ATTENTION TO WHAT MATTERS</span>
+                            <span>06 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 7: TAKING RESPONSIBILITY -->
+
+                    <article class="page hidden" id="page7">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 07 · AN HONEST REFLECTION</span>
+                            <span class="page-number">07</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">📖</div>
+
+                            <h2>I'm not going to make excuses.</h2>
+
+                            <p>
+                                I know that writing an apology is easy.
+                                Making meaningful changes is the part
+                                that actually matters.
+                            </p>
+
+                            <p>
+                                I could fill this entire notebook with
+                                explanations, reasons, and promises.
+                                I could make every mistake sound like
+                                an unfortunate accident.
+                            </p>
+
+                            <p>But I don't want to do that.</p>
+
+                            <p>
+                                I have things to improve. I have habits
+                                to work on. I have moments I wish I had
+                                handled differently.
+                            </p>
+
+                            <p>
+                                I am still learning how to communicate
+                                better, how to take initiative, how
+                                to be more thoughtful, and how to
+                                handle difficult conversations
+                                without making them harder.
+                            </p>
+
+                            <p>
+                                I won't pretend that one notebook
+                                magically fixes everything.
+                                It doesn't. Unfortunately, there is
+                                no save button for real life.
+                                I checked. HAHAHA.
+                            </p>
+
+                            <p>
+                                But I can start by acknowledging
+                                what needs to change and actually
+                                putting effort into it.
+                            </p>
+
+                            <p class="handwriting">
+                                No perfect promises.
+                                Just genuine effort.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>ACCOUNTABILITY BEFORE EXCUSES</span>
+                            <span>07 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 8: APPRECIATION -->
+
+                    <article class="page hidden" id="page8">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 08 · SOMETHING I APPRECIATE</span>
+                            <span class="page-number">08</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">🌷</div>
+
+                            <h2>A few words of appreciation.</h2>
+
+                            <p>
+                                Beyond the apologies, I also want to
+                                acknowledge the person reading this.
+                            </p>
+
+                            <p>
+                                I appreciate the conversations,
+                                the laughter, the little moments,
+                                and even the ordinary days that
+                                somehow became memorable.
+                            </p>
+
+                            <p>
+                                I admire your determination,
+                                the things you work hard for,
+                                and the way you continue moving
+                                forward even when things get tiring.
+                            </p>
+
+                            <p>
+                                I hope you never forget that your
+                                achievements deserve recognition.
+                                You don't have to minimize your
+                                accomplishments or act like
+                                everything you do is ordinary.
+                            </p>
+
+                            <p>
+                                And yes, this is the part where
+                                the admirer becomes slightly
+                                embarrassing and starts giving
+                                compliments.
+                            </p>
+
+                            <p>
+                                Please remain calm.
+                                This is a documented event.
+                                There is no need to call the authorities.
+                                HAHAHA.
+                            </p>
+
+                            <p>
+                                Seriously, though, I hope you
+                                continue to recognize your own worth
+                                and give yourself credit for
+                                everything you've worked for.
+                            </p>
+
+                            <p class="handwriting">
+                                Keep doing your best, Miss.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>A NOTE OF APPRECIATION</span>
+                            <span>08 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 9: MOVING FORWARD -->
+
+                    <article class="page hidden" id="page9">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 09 · MOVING FORWARD</span>
+                            <span class="page-number">09</span>
+                        </div>
+
+                        <div class="page-content">
+
+                            <div class="page-sticker">📎</div>
+
+                            <h2>What I hope to do better.</h2>
+
+                            <p>
+                                I don't want to end this notebook
+                                by simply listing everything I
+                                regret. I also want to think about
+                                what I can do differently from here.
+                            </p>
+
+                            <p>
+                                I want to communicate more openly,
+                                even when I don't have the perfect
+                                words prepared.
+                            </p>
+
+                            <p>
+                                I want to be more thoughtful
+                                instead of assuming that good
+                                intentions are enough.
+                            </p>
+
+                            <p>
+                                I want to take initiative,
+                                make plans, and show effort
+                                through actions instead of
+                                relying only on explanations.
+                            </p>
+
+                            <p>
+                                I want to listen without immediately
+                                becoming defensive, and understand
+                                before reacting.
+                            </p>
+
+                            <p>
+                                Most importantly, I want to respect
+                                your feelings and your decisions.
+                                You deserve honesty, consideration,
+                                and communication.
+                            </p>
+
+                            <p>
+                                I know improvement takes time,
+                                and I won't ask you to believe
+                                every word just because I wrote it.
+                                Actions will always speak more clearly.
+                            </p>
+
+                            <p class="handwriting">
+                                I'll let my actions do the talking.
+                            </p>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>A PROMISE TO DO BETTER</span>
+                            <span>09 / 10</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAGE 10: FINAL NOTE -->
+
+                    <article class="page hidden" id="page10">
+
+                        <div class="page-header">
+                            <span class="page-category">CHAPTER 10 · THE LAST PAGE</span>
+                            <span class="page-number">10</span>
+                        </div>
+
+                        <div class="page-content final-page">
+
+                            <div class="page-sticker">✉️</div>
+
+                            <h2>And that's everything... for now.</h2>
+
+                            <p>
+                                Well, Miss, you've officially reached
+                                the last page.
+                            </p>
+
+                            <p>
+                                Thank you for spending a little
+                                of your time reading this very
+                                unnecessarily long notebook.
+                            </p>
+
+                            <p>
+                                I know I could have made a shorter
+                                message. I know I could have simply
+                                said sorry. But I wanted to give
+                                these thoughts a little more
+                                attention than that.
+                            </p>
+
+                            <p>
+                                I'm genuinely sorry for the moments
+                                I could have handled better,
+                                for the things I failed to communicate,
+                                and for the times my actions
+                                didn't reflect the consideration
+                                I should have shown.
+                            </p>
+
+                            <p>
+                                I hope you know that this apology
+                                isn't meant to pressure you into
+                                responding a certain way.
+                                You don't owe me an immediate
+                                reply or a particular reaction.
+                            </p>
+
+                            <p>
+                                I simply wanted to say these things
+                                properly, with honesty and a little
+                                creativity along the way.
+                            </p>
+
+                            <p>
+                                Take care of yourself, keep smiling,
+                                keep doing the things you love,
+                                and don't forget to give yourself
+                                a little rest between all those
+                                responsibilities.
+                            </p>
+
+                            <p class="handwriting final-signature">
+                                Sincerely,
+                                <br>
+                                Your admirer.
+                            </p>
+
+                            <div class="final-stamp">
+                                <span>END OF NOTEBOOK</span>
+                                <span>✎</span>
+                            </div>
+
+                        </div>
+
+                        <div class="page-footer">
+                            <span>THANK YOU FOR READING</span>
+                            <span>10 / 10</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             BOOK CONTROLS
+        ================================== -->
+
+        <section class="book-controls hidden" id="bookControls">
+
+            <button
+                class="nav-button previous-button"
+                id="previousButton"
+                onclick="previousPage()"
+                type="button">
+                ← Previous
+            </button>
+
+            <div class="page-indicator">
+                <span id="currentPage">1</span>
+                <span class="indicator-divider">/</span>
+                <span>10</span>
+            </div>
+
+            <button
+                class="nav-button next-button"
+                id="nextButton"
+                onclick="nextPage()"
+                type="button">
+                Next page →
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             CLOSING MESSAGE
+        ================================== -->
+
+        <section class="closing-note hidden" id="closingNote">
+
+            <div class="closing-icon">📚</div>
+
+            <h2>Thank you, Miss.</h2>
+
+            <p>
+                You've reached the end of this little collection.
+                I hope at least one page made you smile.
+            </p>
+
+            <p class="handwriting">
+                Have a lovely day, and please don't forget
+                to take care of yourself.
+            </p>
+
+            <button
+                class="restart-button"
+                onclick="restartBook()"
+                type="button">
+                Read the notebook again ↻
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer class="website-footer">
+
+            <p>
+                Made with HTML, CSS, JavaScript,
+                and an unreasonable amount of stationery.
+            </p>
+
+            <span>
+                A LITTLE NOTE FROM AN ADMIRER · 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

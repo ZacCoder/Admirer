@@ -1,0 +1,1248 @@
+
+/* =========================================
+   THE ADMIRER'S NOTEBOOK
+   A soft pink, blue, and paper-inspired theme
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ---------- COLOR PALETTE ---------- */
+
+:root {
+    --blue: #a9c9e8;
+    --blue-dark: #496b91;
+    --blue-soft: #e8f2fc;
+
+    --pink: #efb9cc;
+    --pink-dark: #bd718f;
+    --pink-soft: #fff0f5;
+
+    --lavender: #e8e0f5;
+    --cream: #fffaf1;
+    --paper: #fffdf8;
+
+    --ink: #39465b;
+    --muted: #8992a2;
+
+    --shadow: 0 18px 45px rgba(75, 91, 119, 0.14);
+}
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 18px 25px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 12% 15%, #fce5ed 0, transparent 28%),
+        radial-gradient(circle at 88% 80%, #dcecff 0, transparent 30%),
+        linear-gradient(135deg, #f8f2f7, #edf4fc 55%, #fff8f1);
+    overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND DECORATIONS ---------- */
+
+.doodle {
+    position: fixed;
+    z-index: 0;
+    color: #9ebbd9;
+    opacity: 0.45;
+    font-size: 25px;
+    pointer-events: none;
+    animation: floatDoodle 5s ease-in-out infinite;
+}
+
+.doodle-1 {
+    top: 12%;
+    left: 8%;
+}
+
+.doodle-2 {
+    top: 22%;
+    right: 9%;
+    color: #d99bb5;
+    animation-delay: 1s;
+}
+
+.doodle-3 {
+    bottom: 20%;
+    left: 7%;
+    animation-delay: 2s;
+}
+
+.doodle-4 {
+    bottom: 15%;
+    right: 8%;
+    color: #d99bb5;
+    animation-delay: 1.5s;
+}
+
+.doodle-5 {
+    top: 55%;
+    right: 4%;
+    animation-delay: 0.5s;
+}
+
+.doodle-6 {
+    top: 65%;
+    left: 4%;
+    color: #d99bb5;
+    animation-delay: 2.5s;
+}
+
+@keyframes floatDoodle {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(7deg);
+    }
+}
+/* SCATTERED NOTEBOOK COVER DECORATIONS */
+
+.cover-sticker {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* ☁️ Cloud — upper left */
+.sticker-cloud {
+    top: 12%;
+    left: 8%;
+    font-size: 2.5rem;
+    transform: rotate(-12deg);
+}
+
+/* ⭐ Star — upper right */
+.sticker-star {
+    top: 10%;
+    right: 10%;
+    font-size: 2.2rem;
+    transform: rotate(15deg);
+}
+
+/* 🌷 Flower — left middle */
+.sticker-flower {
+    top: 43%;
+    left: 5%;
+    font-size: 2.4rem;
+    transform: rotate(-15deg);
+}
+
+/* ✏️ Pencil — right middle */
+.sticker-pencil {
+    top: 38%;
+    right: 6%;
+    font-size: 2.5rem;
+    transform: rotate(35deg);
+}
+
+/* ✧ Sparkle — lower left */
+.sticker-sparkle {
+    bottom: 19%;
+    left: 17%;
+    font-size: 2rem;
+    transform: rotate(10deg);
+}
+
+/* 📎 Paper clip — upper middle side */
+.sticker-clip {
+    top: 24%;
+    right: 24%;
+    font-size: 1.8rem;
+    transform: rotate(20deg);
+}
+
+/* 📚 Books — lower right */
+.sticker-book {
+    bottom: 12%;
+    right: 9%;
+    font-size: 2.5rem;
+    transform: rotate(-8deg);
+}
+
+/* 🦋 Butterfly — lower left corner */
+.sticker-butterfly {
+    bottom: 10%;
+    left: 7%;
+    font-size: 2.3rem;
+    transform: rotate(-12deg);
+}
+
+/* Keep decorations away from the title on small screens */
+@media (max-width: 600px) {
+    .sticker-cloud { top: 8%; left: 5%; font-size: 1.8rem; }
+    .sticker-star { top: 8%; right: 5%; font-size: 1.7rem; }
+    .sticker-flower { top: 42%; left: 3%; font-size: 1.7rem; }
+    .sticker-pencil { top: 40%; right: 3%; font-size: 1.8rem; }
+    .sticker-sparkle { bottom: 18%; left: 9%; font-size: 1.5rem; }
+    .sticker-clip { top: 22%; right: 17%; font-size: 1.4rem; }
+    .sticker-book { bottom: 9%; right: 5%; font-size: 1.8rem; }
+    .sticker-butterfly { bottom: 8%; left: 4%; font-size: 1.7rem; }
+}
+/* ---------- MAIN CONTAINER ---------- */
+
+.website-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top-label {
+    margin-bottom: 9px;
+    color: var(--pink-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.volume-label {
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* ---------- BOOK SCENE ---------- */
+
+.book-scene {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    perspective: 1600px;
+}
+
+.book {
+    position: relative;
+    width: 100%;
+    min-height: 510px;
+    transform-style: preserve-3d;
+}
+
+/* ---------- BOOK COVER ---------- */
+
+.book-cover {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 510px;
+    padding: 55px 45px 45px 65px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.9), transparent 30%),
+        linear-gradient(145deg, #f9dce8, #e6eafa 55%, #d9e9f8);
+
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 15px 24px 24px 15px;
+
+    box-shadow:
+        0 20px 45px rgba(67, 84, 112, 0.18),
+        inset 5px 0 10px rgba(255,255,255,0.45);
+
+    transform-origin: left center;
+    transition:
+        transform 1.15s cubic-bezier(.65, 0, .35, 1),
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* Cover decorations */
+
+.cover-decoration {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    color: rgba(87, 119, 157, 0.55);
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.cover-tape {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 90px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.55);
+    transform: translateX(-50%) rotate(-3deg);
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.cover-spine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 21px;
+    background: linear-gradient(
+        to right,
+        rgba(115, 131, 161, 0.25),
+        rgba(255,255,255,0.25)
+    );
+    border-right: 1px solid rgba(255,255,255,0.6);
+    pointer-events: none;
+}
+
+/* Cover content */
+
+.cover-icon {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto 15px;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.book-cover h1 {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 13px;
+
+    color: #435d7b;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 45px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.cover-subtitle {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 24px;
+
+    color: #687b95;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cover-label {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 28px;
+
+    color: #a16f8a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* ---------- OPEN BUTTON ---------- */
+
+.open-book-button {
+    position: relative;
+    z-index: 10;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-width: 205px;
+    min-height: 49px;
+    padding: 13px 25px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #729cc7, #9a8fc5);
+
+    border: 0;
+    border-radius: 30px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 7px 18px rgba(91, 119, 164, 0.25);
+
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.open-book-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 11px 23px rgba(91, 119, 164, 0.32);
+    background: linear-gradient(135deg, #638dbb, #8d82bb);
+}
+
+.open-book-button:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.open-book-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Cover opening animation */
+
+.book.open .book-cover {
+    transform: rotateY(-155deg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ---------- BOOK PAGES ---------- */
+
+.book-pages {
+    position: relative;
+    width: 100%;
+    min-height: 510px;
+    padding: 15px;
+
+    background: #dce7f4;
+    border-radius: 15px 24px 24px 15px;
+
+    box-shadow: var(--shadow);
+}
+
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 480px;
+    padding: 48px 55px;
+
+    text-align: left;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 34px,
+            rgba(160, 185, 211, 0.17) 35px
+        ),
+        var(--paper);
+
+    border: 1px solid #eee8df;
+    border-radius: 9px;
+    box-shadow: 0 5px 15px rgba(70, 85, 110, 0.08);
+}
+
+.page.hidden {
+    display: none !important;
+}
+
+.page-enter {
+    animation: pageEnter 0.45s ease both;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.page-number {
+    margin-bottom: 24px;
+    color: var(--pink-dark);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.page-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 13px;
+
+    color: #6d88a8;
+    background: #edf4fb;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.page h2 {
+    width: 100%;
+    margin-bottom: 22px;
+
+    color: #4b6687;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.3;
+}
+
+.page p {
+    width: 100%;
+    margin-bottom: 17px;
+
+    color: #566174;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 21px;
+    line-height: 1.65;
+}
+
+.page strong {
+    color: #a45f7e;
+    font-weight: 700;
+}
+
+/* Notes and highlights */
+
+.highlight-note {
+    width: 100%;
+    margin: 15px 0 20px;
+    padding: 17px 20px;
+
+    color: #66758e;
+    background: #fcecf2;
+
+    border-left: 4px solid #dfa2ba;
+    border-radius: 5px;
+
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.page .small-note {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.page .signature {
+    align-self: flex-end;
+    margin-top: auto;
+    padding-top: 25px;
+
+    color: #9b6e88;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 23px;
+}
+
+/* ---------- PAGE CONTROLS ---------- */
+
+.book-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    margin: 22px auto 0;
+}
+
+.book-controls.hidden,
+.closing-note.hidden {
+    display: none !important;
+}
+
+.book-controls button {
+    min-width: 115px;
+    padding: 11px 19px;
+
+    color: #ffffff;
+    background: #799fc6;
+
+    border: 0;
+    border-radius: 25px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.book-controls button:hover:not(:disabled) {
+    background: #5e83ad;
+    transform: translateY(-2px);
+}
+
+.book-controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#currentPage {
+    min-width: 50px;
+    color: #647b99;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ---------- CLOSING NOTE ---------- */
+
+.closing-note {
+    max-width: 600px;
+    margin: 35px auto 0;
+    padding: 35px 30px;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+    animation: pageEnter 0.6s ease both;
+}
+
+.closing-note h2 {
+    margin-bottom: 15px;
+    color: #526f91;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+}
+
+.closing-note p {
+    margin-bottom: 20px;
+    color: #647187;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.closing-note button {
+    padding: 12px 23px;
+
+    color: white;
+    background: linear-gradient(135deg, #d995b2, #8daed2);
+
+    border: 0;
+    border-radius: 25px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.closing-note button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(100, 115, 150, 0.2);
+}
+
+.final-stamp {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 9px 16px;
+
+    color: #a56e8b;
+    border: 1px dashed #d69bb5;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: rotate(-3deg);
+}
+
+/* ---------- FOOTER ---------- */
+
+.website-footer {
+    position: relative;
+    z-index: 1;
+    margin: 35px auto 0;
+    color: #9299a8;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .book {
+        min-height: 500px;
+    }
+
+    .book-cover {
+        min-height: 500px;
+        padding: 50px 30px 40px 48px;
+    }
+
+    .book-pages {
+        min-height: 500px;
+    }
+
+    .page {
+        min-height: 470px;
+        padding: 40px 35px;
+    }
+
+    .page p {
+        font-size: 20px;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 520px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    .top-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .volume-label {
+        margin-bottom: 22px;
+    }
+
+    .book,
+    .book-cover,
+    .book-pages {
+        min-height: 490px;
+    }
+
+    .book-cover {
+        padding: 48px 22px 35px 35px;
+    }
+
+    .cover-icon {
+        font-size: 42px;
+        margin-bottom: 13px;
+    }
+
+    .book-cover h1 {
+        font-size: 32px;
+    }
+
+    .cover-subtitle {
+        max-width: 290px;
+        font-size: 19px;
+    }
+
+    .cover-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .open-book-button {
+        min-width: 190px;
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .page {
+        min-height: 460px;
+        padding: 32px 23px;
+    }
+
+    .page-number {
+        margin-bottom: 19px;
+    }
+
+    .page h2 {
+        font-size: 27px;
+    }
+
+    .page p {
+        font-size: 19px;
+        line-height: 1.55;
+    }
+
+    .highlight-note {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    .book-controls {
+        gap: 10px;
+    }
+
+    .book-controls button {
+        min-width: 100px;
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    .closing-note {
+        padding: 28px 20px;
+    }
+}
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 360px) {
+    .book-cover {
+        padding-right: 15px;
+        padding-left: 30px;
+    }
+
+    .book-cover h1 {
+        font-size: 28px;
+    }
+
+    .cover-subtitle {
+        font-size: 17px;
+    }
+
+    .cover-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .page {
+        padding: 28px 17px;
+    }
+
+    .page h2 {
+        font-size: 24px;
+    }
+
+    .page p {
+        font-size: 18px;
+    }
+
+    .book-controls button {
+        min-width: 88px;
+        padding: 9px 10px;
+    }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+/* =========================================
+   EXTRA CUTE PINK + BLUE NOTEBOOK COVER
+========================================= */
+
+/* Main cover background */
+.book-cover {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 15% 18%, rgba(255,255,255,0.85), transparent 23%),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.7), transparent 25%),
+        linear-gradient(
+            135deg,
+            #f8dce9 0%,
+            #f4e4f1 35%,
+            #e4eafa 68%,
+            #cfe3f6 100%
+        );
+
+    border: 2px solid rgba(255,255,255,0.9);
+    border-radius: 15px 25px 25px 15px;
+}
+
+/* Soft decorative circles */
+.book-cover::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    top: -120px;
+    right: -80px;
+
+    background: rgba(255,255,255,0.22);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+}
+
+.book-cover::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: -110px;
+    left: -65px;
+
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+}
+
+/* Content group */
+.cover-content {
+    position: relative;
+    z-index: 4;
+
+    width: calc(100% - 20px);
+    max-width: 520px;
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* Top label */
+.cover-top-label {
+    margin-bottom: 22px;
+    padding: 8px 15px;
+
+    color: #a36f91;
+    background: rgba(255,255,255,0.55);
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Book icon */
+.cover-icon {
+    margin-bottom: 12px;
+    font-size: 55px;
+    filter: drop-shadow(0 5px 5px rgba(111, 112, 154, 0.15));
+    animation: cuteBookFloat 3s ease-in-out infinite;
+}
+
+@keyframes cuteBookFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-7px) rotate(3deg);
+    }
+}
+
+/* Main title */
+.book-cover h1 {
+    margin: 0 auto 13px;
+    color: #536d91;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 44px);
+    line-height: 1.2;
+    text-align: center;
+
+    text-shadow: 2px 3px 0 rgba(255,255,255,0.55);
+}
+
+/* Decorative divider */
+.cover-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    margin: 4px auto 15px;
+    color: #d28eae;
+    font-size: 17px;
+}
+
+/* Subtitle */
+.cover-subtitle {
+    max-width: 390px;
+    margin: 0 auto 22px;
+
+    color: #647b9c;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 22px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+/* Edition label */
+.cover-label {
+    margin: 0 auto 25px;
+    padding: 8px 13px;
+
+    color: #a36e8b;
+    background: rgba(255,255,255,0.5);
+
+    border: 1px dashed rgba(185, 130, 163, 0.65);
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Button */
+.open-book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 215px;
+    padding: 14px 23px;
+
+    color: white;
+    background: linear-gradient(110deg, #d88eaf, #91acd4);
+
+    border: 2px solid rgba(255,255,255,0.75);
+    border-radius: 30px;
+
+    box-shadow:
+        0 7px 18px rgba(125, 124, 170, 0.2),
+        inset 0 1px 3px rgba(255,255,255,0.35);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.open-book-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(110deg, #c97da1, #7f9fc9);
+    box-shadow: 0 11px 22px rgba(125, 124, 170, 0.3);
+}
+
+.button-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.open-book-button:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+/* Little note at the bottom */
+.cover-bottom-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 22px;
+
+    color: #9a87a6;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 15px;
+}
+
+/* Floating cover stickers */
+.cover-sticker {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    filter: drop-shadow(0 3px 3px rgba(80, 90, 120, 0.12));
+}
+
+.sticker-cloud {
+    top: 95px;
+    left: 48px;
+    font-size: 29px;
+    transform: rotate(-10deg);
+}
+
+.sticker-star {
+    top: 90px;
+    right: 55px;
+    font-size: 23px;
+    transform: rotate(12deg);
+}
+
+.sticker-flower {
+    bottom: 105px;
+    left: 48px;
+    font-size: 28px;
+    transform: rotate(-15deg);
+}
+
+.sticker-pencil {
+    bottom: 95px;
+    right: 50px;
+    font-size: 28px;
+    transform: rotate(25deg);
+}
+
+.sticker-sparkle {
+    top: 190px;
+    left: 25px;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.sticker-clip {
+    top: 25px;
+    left: 38px;
+    font-size: 25px;
+    transform: rotate(-15deg);
+}
+
+.sticker-book {
+    top: 190px;
+    right: 35px;
+    font-size: 26px;
+    transform: rotate(9deg);
+}
+
+.sticker-butterfly {
+    bottom: 32px;
+    right: 95px;
+    font-size: 23px;
+    transform: rotate(-12deg);
+}
+
+/* Tape decorations */
+.cover-tape {
+    position: absolute;
+    z-index: 5;
+
+    width: 75px;
+    height: 22px;
+
+    background: rgba(255,255,255,0.48);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 3px;
+
+    pointer-events: none;
+}
+
+.tape-one {
+    top: 17px;
+    right: 105px;
+    transform: rotate(8deg);
+}
+
+.tape-two {
+    bottom: 20px;
+    left: 95px;
+    transform: rotate(-9deg);
+}
+
+/* Keep spine visible */
+.cover-spine {
+    z-index: 6;
+}
+
+/* Mobile cover adjustments */
+@media (max-width: 520px) {
+    .cover-content {
+        width: calc(100% - 10px);
+        margin-left: 10px;
+    }
+
+    .cover-top-label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .cover-icon {
+        font-size: 45px;
+    }
+
+    .book-cover h1 {
+        font-size: 30px;
+    }
+
+    .cover-subtitle {
+        font-size: 19px;
+    }
+
+    .sticker-cloud {
+        top: 80px;
+        left: 25px;
+        font-size: 23px;
+    }
+
+    .sticker-star {
+        top: 85px;
+        right: 25px;
+        font-size: 19px;
+    }
+
+    .sticker-flower {
+        bottom: 75px;
+        left: 23px;
+        font-size: 23px;
+    }
+
+    .sticker-pencil {
+        bottom: 75px;
+        right: 22px;
+        font-size: 23px;
+    }
+
+    .sticker-sparkle {
+        left: 13px;
+        font-size: 20px;
+    }
+
+    .sticker-book {
+        right: 14px;
+        font-size: 21px;
+    }
+
+    .sticker-butterfly {
+        right: 65px;
+        font-size: 19px;
+    }
+}
+
+}
